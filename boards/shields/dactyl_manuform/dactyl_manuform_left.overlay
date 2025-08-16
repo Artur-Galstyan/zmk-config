@@ -6,6 +6,6 @@
         , <&gpio0 29 GPIO_ACTIVE_HIGH>   // pin 029 - Column 1 (W key) ✓
         , <&gpio0 2 GPIO_ACTIVE_HIGH>    // pin 002 - Column 2 (E key) ✓
         , <&gpio0 10 GPIO_ACTIVE_HIGH>   // pin 010 - Column 3 (R key) ✓
-        , <&gpio0 113 GPIO_ACTIVE_HIGH>  // pin 113 - Column 4 (T key) - second attempt
+        , <&gpio0 111 GPIO_ACTIVE_HIGH>  // pin 111 - Column 4 (T key) - third attempt
         ;
 };
