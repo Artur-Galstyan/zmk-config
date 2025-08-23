@@ -12,7 +12,7 @@
         compatible = "zmk,combos";
 
         reset {
-            bindings = <&bootloader>;
+            bindings = <&sys_reset>;
             key-positions = <1 2 3 4>;
         };
     };
