@@ -8,7 +8,14 @@
 #define ADJUST 3
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <1 2 3 4>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -25,11 +32,11 @@
 
         layer_1 {
             bindings = <
-  &trans       &kp UP_ARROW    &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &kp LEFT     &kp DOWN_ARROW  &kp RIGHT  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &bootloader  &trans          &trans     &trans  &trans    &trans  &trans  &trans  &trans  &bootloader
-  &trans       &trans                                                               &trans  &trans
-  &trans       &trans          &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans    &kp UP_ARROW    &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans    &trans          &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans    &trans                                                               &trans  &trans
+  &trans    &trans          &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
