@@ -11,9 +11,14 @@
     combos {
         compatible = "zmk,combos";
 
-        reset {
-            bindings = <&sys_reset>;
+        left_bootloader {
+            bindings = <&bootloader>;
             key-positions = <1 2 3 4>;
+        };
+
+        right_bootloader {
+            bindings = <&bootloader>;
+            key-positions = <5 6 7 8>;
         };
     };
 
