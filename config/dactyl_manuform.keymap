@@ -1,11 +1,14 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT 0
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
+
+&mt { tapping-term-ms = <175>; };
 
 / {
     combos {
@@ -14,6 +17,16 @@
         bootloader {
             bindings = <&bootloader>;
             key-positions = <1 2 3 4>;
+        };
+
+        bt_nxt {
+            bindings = <&bt BT_NXT>;
+            key-positions = <32 0>;
+        };
+
+        bt_clr {
+            bindings = <&bt BT_CLR>;
+            key-positions = <0 36>;
         };
     };
 
