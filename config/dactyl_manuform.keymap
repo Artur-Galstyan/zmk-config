@@ -8,8 +8,6 @@
 #define RAISE 2
 #define ADJUST 3
 
-&mt { tapping-term-ms = <175>; };
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -30,16 +28,40 @@
         };
     };
 
+    behaviors {
+        mt_left: mt_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            hold-trigger-key-positions = <5 15 25 26 27 34 35 6 7 8 16 17 18 26 27 28 9 19 29 33 40 41 42 43>;
+            hold-trigger-on-release;
+        };
+
+        mt_right: mt_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 36 37 38 39>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-  &kp Q           &kp W           &kp E             &kp R        &kp T    &kp Y      &kp U                &kp I              &kp O            &kp P
-  &mt LEFT_WIN A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G    &kp H      &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMICOLON
-  &kp Z           &kp X           &kp C             &kp V        &kp B    &kp N      &kp M                &kp COMMA          &kp DOT          &kp SLASH
-  &kp LEFT        &kp RIGHT                                                                                                  &kp TAB          &kp DELETE
-  &kp UP_ARROW    &kp DOWN        &kp ESCAPE        &mo 2        &mo 1    &kp ENTER  &kp SPACE            &mo 1              &mo 2            &kp BACKSPACE
+  &kp Q                &kp W                &kp E                  &kp R             &kp T    &kp Y      &kp U                      &kp I                    &kp O                  &kp P
+  &mt_left LEFT_WIN A  &mt_left LEFT_ALT S  &mt_left LEFT_SHIFT D  &mt_left LCTRL F  &kp G    &kp H      &mt_right RIGHT_CONTROL J  &mt_right RIGHT_SHIFT K  &mt_right RIGHT_ALT L  &mt_right RIGHT_GUI SEMICOLON
+  &kp Z                &kp X                &kp C                  &kp V             &kp B    &kp N      &kp M                      &kp COMMA                &kp DOT                &kp SLASH
+  &kp LEFT             &kp RIGHT                                                                                                                             &kp TAB                &kp DELETE
+  &kp UP_ARROW         &kp DOWN             &kp ESCAPE             &mo 2             &mo 1    &kp ENTER  &kp SPACE                  &mo 1                    &mo 2                  &kp BACKSPACE
             >;
         };
 
