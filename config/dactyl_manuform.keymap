@@ -73,21 +73,21 @@
 
         layer_1 {
             bindings = <
-  &kp NUMBER_1      &kp NUMBER_2          &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8     &kp NUMBER_9           &kp NUMBER_0
-  &trans            &trans                &trans          &trans        &kp PLUS        &kp MINUS       &trans        &trans           &trans                 &trans
-  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp EQUAL     &kp APOS        &kp UNDERSCORE  &kp DOLLAR    &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET
-  &trans            &trans                                                                                                             &trans                 &trans
-  &trans            &trans                &trans          &trans        &trans          &trans          &trans        &trans           &trans                 &trans
+  &kp NUMBER_1       &kp NUMBER_2       &kp NUMBER_3          &kp NUMBER_4           &kp NUMBER_5    &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9   &kp NUMBER_0
+  &trans             &trans             &trans                &trans                 &kp KP_PLUS     &kp KP_MINUS    &trans        &trans            &trans         &trans
+  &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE        &kp UNDERSCORE  &kp DOLLAR    &kp GREATER_THAN  &kp LESS_THAN  &kp PERCENT
+  &kp LEFT_BRACE     &kp RIGHT_BRACE                                                                                                                 &trans         &trans
+  &kp DOUBLE_QUOTES  &kp APOSTROPHE     &trans                &trans                 &trans          &trans          &trans        &trans            &trans         &trans
             >;
         };
 
         layer_2 {
             bindings = <
-  &trans  &trans  &trans  &trans  &trans    &kp HASH  &trans    &trans        &trans     &bootloader
-  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans        &trans     &trans
-  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
-  &trans  &trans                                                              &trans     &trans
-  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans        &trans     &trans
+  &trans  &trans     &trans           &trans         &trans       &trans         &trans     &trans        &trans         &bootloader
+  &trans  &trans     &trans           &trans         &kp ASTRK    &kp KP_DIVIDE  &trans     &trans        &trans         &trans
+  &trans  &kp TILDE  &kp EXCLAMATION  &kp AMPERSAND  &kp GRAVE    &kp HASH       &kp CARET  &kp QUESTION  &kp BACKSLASH  &trans
+  &trans  &trans                                                                                          &trans         &trans
+  &trans  &trans     &trans           &trans         &trans       &trans         &trans     &trans        &trans         &trans
             >;
         };
 
