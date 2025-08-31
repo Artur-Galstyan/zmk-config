@@ -83,11 +83,11 @@
 
         layer_2 {
             bindings = <
-  &trans  &trans     &trans           &trans         &trans       &trans         &trans     &trans        &trans         &bootloader
-  &trans  &trans     &trans           &trans         &kp ASTRK    &kp KP_DIVIDE  &trans     &trans        &trans         &trans
-  &kp AT  &kp TILDE  &kp EXCLAMATION  &kp AMPERSAND  &kp GRAVE    &kp HASH       &kp CARET  &kp QUESTION  &kp BACKSLASH  &trans
-  &trans  &trans                                                                                          &trans         &trans
-  &trans  &trans     &trans           &trans         &trans       &trans         &trans     &trans        &trans         &trans
+  &trans  &trans     &trans           &trans         &trans          &trans         &trans     &trans        &trans         &bootloader
+  &trans  &trans     &trans           &trans         &kp ASTRK       &kp KP_DIVIDE  &trans     &trans        &trans         &trans
+  &kp AT  &kp TILDE  &kp EXCLAMATION  &kp AMPERSAND  &kp KP_EQUAL    &kp HASH       &kp CARET  &kp QUESTION  &kp BACKSLASH  &kp GRAVE
+  &trans  &trans                                                                                             &trans         &trans
+  &trans  &trans     &trans           &trans         &trans          &trans         &trans     &trans        &trans         &trans
             >;
         };
 
